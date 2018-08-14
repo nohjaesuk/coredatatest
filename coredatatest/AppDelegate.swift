@@ -17,7 +17,27 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        window = UIWindow(frame: UIScreen.main.bounds)
+        window?.makeKeyAndVisible()
+
+        window?.rootViewController = UINavigationController(rootViewController: TestViewController())
+//        let controller = self.window?.rootViewController as! TestViewController
+
+//        let context = self.persistentContainer.viewContext
+        UINavigationBar.appearance().backgroundColor = UIColor.white
+//        controller.managedObjectContext = self.persistentContainer.viewContext
         return true
+        
+//        let controller = self.window!.rootViewController as! TestViewController
+//
+//        // Get the reference to the Managed Object Context
+//        // from the persistent coordinator.
+//        let context = self.persistentContainer.viewContext
+//
+//        // Set the managed object context to the View Controller before
+//        // it gets the view loaded.
+//        controller.managedObjectContext = self.persistentContainer.viewContext
+//        return true
     }
 
     func applicationWillResignActive(_ application: UIApplication) {
